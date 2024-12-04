@@ -11,8 +11,8 @@ import { LoginService } from './service/login.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginGuard } from './guards/login.guard';
 import { PessoaFormComponent } from './components/pessoa-form/pessoa-form.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalModule } from './components/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     PessoaDetailComponent,
     LoginComponent,
-    PessoaFormComponent,
-    ModalComponent
+    PessoaFormComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +29,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    ModalModule
   ],
   providers: [LoginService, LoginGuard],
   bootstrap: [AppComponent]
