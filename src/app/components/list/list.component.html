@@ -1,0 +1,36 @@
+<section class="container">
+  <header class="container">
+    <h2>Lista Pessoas</h2>
+    <button [routerLink]="['/list/nova']" class="btn btn-primary">Nova Pessoa</button>
+  </header>
+  <ul *ngFor="let Pessoa of pessoas" class="ul-list">
+    <li class="li-list list-none">
+      <div class="li-list1">ID: {{ Pessoa.id }}</div>
+      <div class="li-list2">
+        Nome: <a routerLink="/list/{{ Pessoa.id }}"> {{ Pessoa.name }}</a>
+      </div>
+      <div class="li-list2">Idade: {{ Pessoa.age }}</div>
+      <div class="li-list2">Profissão: {{ Pessoa.job }}</div>
+      <button [routerLink]="['/list/edit', Pessoa.id]" class="btn btn-success">Editar</button>
+      <button (click)="openConfirmationModal(Pessoa)" class="btn btn-danger">Excluir</button>
+    </li>
+  </ul>
+
+  <!-- Modal de Confirmação -->
+  <ng-template #confirmationModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Confirmação</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Tem certeza que deseja excluir {{ pessoaToRemove?.name }} que trabalha como {{ pessoaToRemove?.job }}?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.dismiss('cancel click')">Cancelar</button>
+      <button type="button" class="btn btn-danger" (click)="confirmRemovePessoa(modal)">Excluir</button>
+    </div>
+  </ng-template>
+</section>
+

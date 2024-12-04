@@ -1,0 +1,19 @@
+.container{
+  background-color: black;
+  color: white;
+  width: 50%;
+  border-radius: 6px;
+}
+
+h2{
+
+  text-align: center;
+  margin-top: 200px;
+}
+p{
+
+  background-color: #928f8f;
+  padding: 10px;
+  border-radius: 6px;
+}
+

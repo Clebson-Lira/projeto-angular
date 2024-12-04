@@ -1,0 +1,58 @@
+.container {
+  background-color: black;
+  color: white;
+  width: 50%;
+  border-radius: 6px;
+  margin-top: 200px;
+  display: flex;
+
+
+}
+.btn{
+  background-color:red;
+  color: white;
+  padding: 5px;
+  border-radius: 6px;
+  width: 15%;
+  text-align: center;
+  margin: 5px;
+}
+
+.btn3 {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  border-radius: 6px;
+  width: 15%;
+  text-align: center;
+  margin-left: 33%;
+
+}
+
+form {
+
+  width: 100%;
+}
+
+.col-md-4 {
+
+  width: 100%;
+  align-items: center;
+}
+
+label {
+  width: 50%;
+  align-items: center;
+
+  margin-left: 25%;
+
+}
+
+input {
+  width: 50%;
+  align-items: center;
+
+  margin-left: 25%;
+
+}
+
